@@ -63,8 +63,10 @@ public abstract class BaseServiceImpl <E extends Base, ID extends Serializable> 
             Optional<E> entityOptional = baseRepository.findById(id);
             if (entityOptional.isPresent()) {
                 Integer personId = entityOptional.get().getId();
+                Boolean active = entityOptional.get().getActivo();
                 entityOptional = Optional.of(entity);
                 entityOptional.get().setId(personId);
+                entityOptional.get().setActivo(active);
                 return baseRepository.save(entityOptional.get());
             }
             return null;

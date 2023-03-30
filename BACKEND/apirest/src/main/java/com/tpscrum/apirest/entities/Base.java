@@ -1,5 +1,7 @@
 package com.tpscrum.apirest.entities;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.Id;
@@ -11,6 +13,7 @@ import java.io.Serializable;
 @MappedSuperclass
 public class Base implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private Boolean activo;

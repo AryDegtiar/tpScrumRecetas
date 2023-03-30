@@ -17,4 +17,9 @@ public class Receta extends Base {
 
     private Date createdAt;
 
+    public Receta() {
+        super();
+        this.createdAt = new Date();
+    }
+
 }
