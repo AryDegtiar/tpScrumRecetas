@@ -1,32 +1,29 @@
 import React,{useEffect, useState} from 'react'
 import { Row, Col, Card, Button } from 'react-bootstrap';
-import Search from '../components/Search'
+import SearchRecipe from '../components/SearchRecipe'
+import SearchIngredient from '../components/SearchIngredient'
 import List from '../components/List'
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
-  const [word, setWord]=useState("")
+  const [list, setList]=useState("")
 
-  const wordSearch = (search) =>{
-    fetch('https://jsonplaceholder.typicode.com/users/'+search)
-      .then(response => response.json())
-      .then(json => console.log(json), setWord(search))
-    
-  }
+  
+  console.log(list)
 
   return (
     <div>Home
       <Card>
       <Row>
         <Col  sm={12} lg={4}>
-          <Search wordSearch={wordSearch} type="Ingredientes" />
+          <SearchRecipe setList={setList} type="Recetas" />
         </Col>
         
         <Col  sm={12} lg={4}>
-          <Search wordSearch={wordSearch} type="Recetas" />
+          <SearchIngredient setList={setList} type="Ingredientes" />
         </Col>
       </Row>
-      <h6>palabra buscada:{word}</h6>
+      <h6>palabra buscada:</h6>
       <List/>
       </Card>
     </div>
