@@ -30,7 +30,7 @@ const SearchIngredient = (props) => {
         .then(function (response) {
             // handle success
             console.log(response.data)
-            props.setList(response.data)
+            props.setList(response.data.content)
         })
     }
   return (
