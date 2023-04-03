@@ -4,6 +4,7 @@ import SearchRecipe from '../components/SearchRecipe'
 import SearchIngredient from '../components/SearchIngredient'
 import List from '../components/List'
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Recipes } from '../components/Recipes';
 
 const Home = () => {
   const [list, setList]=useState("")
@@ -25,6 +26,7 @@ const Home = () => {
       </Row>
       <h6>palabra buscada:</h6>
       <List/>
+      <Recipes />
       </Card>
     </div>
   )
