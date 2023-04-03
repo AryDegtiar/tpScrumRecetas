@@ -25,7 +25,6 @@ const Home = () => {
         <Col  sm={12} lg={4}>
           <Search wordSearch={wordSearch} type="Recetas" />
         </Col>
-        
       </Row>
       <h6>palabra buscada:{word}</h6>
       <List/>
