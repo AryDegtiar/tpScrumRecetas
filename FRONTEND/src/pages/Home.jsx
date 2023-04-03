@@ -3,6 +3,7 @@ import { Row, Col, Card, Button } from 'react-bootstrap';
 import Search from '../components/Search'
 import List from '../components/List'
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Recipes } from '../components/Recipes';
 
 const Home = () => {
   const [word, setWord]=useState("")
@@ -29,6 +30,7 @@ const Home = () => {
       </Row>
       <h6>palabra buscada:{word}</h6>
       <List/>
+      <Recipes />
       </Card>
     </div>
   )
