@@ -16,6 +16,9 @@ public class Receta extends Base {
     @NotBlank(message = "El nombre no puede estar vacío")
     private String nombre;
 
+    @NotBlank(message = "La imagen no puede estar vacía")
+    private String imagen;
+
     @NotBlank(message = "La descripción no puede estar vacía")
     private String descripcion;
 
@@ -38,10 +41,11 @@ public class Receta extends Base {
         this.createdAt = new Date();
     }
 
-    public Receta(String nombre, String descripcion) {
+    public Receta(String nombre, String descripcion, String imagen) {
         this();
         this.nombre = nombre;
         this.descripcion = descripcion;
+        this.imagen = imagen;
     }
 
 }

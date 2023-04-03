@@ -93,18 +93,18 @@ public class ApirestApplication {
 
 
 			// Guardo algunas recetas en la base de datos
-			Receta receta1 = new Receta("Milanesa con papas fritas", "Milanesa de lomo con papas fritas");
+			Receta receta1 = new Receta("Milanesa con papas fritas", "Milanesa de lomo con papas fritas","https://astelus.com/wp-content/viajes/Plato-de-milanesa-con-papas-ti%CC%81pico-de-Argentina.jpg");
 			receta1.agregarIngrediente(ingrediente1);
 			receta1.agregarIngrediente(ingrediente6);
 			receta1.agregarIngrediente(ingrediente7);
 			recetaRepository.save(receta1);
 
-			Receta receta2 = new Receta("Pollo con papas fritas", "Pollo con papas fritas");
+			Receta receta2 = new Receta("Pollo con papas fritas", "Pollo con papas fritas", "https://elorigendelsabor.com.ar/wp-content/uploads/2022/06/pollo1.jpg");
 			receta2.agregarIngrediente(ingrediente8);
 			receta2.agregarIngrediente(ingrediente6);
 			recetaRepository.save(receta2);
 
-			Receta receta3 = new Receta("Pollo al champignon", "Pollo al champignon");
+			Receta receta3 = new Receta("Pollo al champignon", "Pollo al champignon", "https://assets.unileversolutions.com/recipes-v2/210719.jpg");
 			receta3.agregarIngrediente(ingrediente8);
 			receta3.agregarIngrediente(ingrediente5);
 			recetaRepository.save(receta3);
