@@ -16,20 +16,16 @@ const Home = () => {
     <div>Home
       <Card>
       <Row>
-        <Col  sm={12} lg={4}>
-          <SearchRecipe setList={setList} type="Recetas" />
-        </Col>
         
-        <Col  sm={12} lg={4}>
+        <Col  sm={12} lg={8}>
           <SearchIngredient setList={setList} type="Ingredientes" />
         </Col>
       </Row>
-      <h6>palabra buscada:</h6>
       {list.length > 0 ? list.map((data)=>(
 
                   <Recipe  name={data.nombre} description={data.descripcion} image={data.imagen} ingredients={data.ingredientes} />
             )): " no hay productos"}
-      <List/>
+      {/*<List/>*/}
       <Recipes />
       </Card>
     </div>
