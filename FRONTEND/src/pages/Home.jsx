@@ -4,7 +4,7 @@ import SearchRecipe from '../components/SearchRecipe'
 import SearchIngredient from '../components/SearchIngredient'
 import List from '../components/List'
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Recipe, Recipes } from '../components/Recipes';
+import { Recipes } from '../components/Recipes';
 
 const Home = () => {
   const [list, setList]=useState([])
@@ -13,11 +13,10 @@ const Home = () => {
   console.log(list)
 
   return (
-    <div>Home
+    <div className='mt-4'>
       <Card>
-      <Row>
-        
-        <Col  sm={12} lg={8}>
+      <Row className='flex justify-center'>
+        <Col sm={12} lg={8}>
           <SearchIngredient setList={setList} type="Ingredientes" />
         </Col>
       </Row>

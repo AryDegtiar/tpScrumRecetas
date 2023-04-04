@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react'
 import makeAnimated from 'react-select/animated';
 import axios from 'axios'
 import Select from 'react-select';
+import { baseUrl } from "../constants"
 const animatedComponents = makeAnimated();
 
 const SearchIngredient = (props) => {
@@ -9,7 +10,7 @@ const SearchIngredient = (props) => {
     const [ingredient, setIngredient]= useState([])
     useEffect( ()=> {
         var list = []
-        axios.get('http://localhost:8081/api/v1/ingredientes')
+        axios.get(baseUrl + '/ingredientes')
         .then(function (response) {
             // handle success
             response.data.map((data)=>{
@@ -26,23 +27,25 @@ const SearchIngredient = (props) => {
             }))
     }
     const post=(event)=>{ 
-        axios.get('http://localhost:8081/api/v1/recetas/search?filtrar='+optionsChosen.join(","))
+        axios.get(baseUrl + '/recetas/search?filtrar='+optionsChosen.join(","))
         .then(function (response) {
             // handle success
             console.log(response.data)
             props.setList(response.data.content)
         })
     }
+
   return (
-    <div className="input-group">
+    <div className="z-20 input-group font-primaryT flex flex-row flex-nowrap gap-2 justify-center w-full rounded-2xl">
         <Select
-        closeMenuOnSelect={false}
-        components={animatedComponents}
-        isMulti
-        onChange={(e)=>complete(e)}
-        options={ingredient}/>
-        <span className="search-btn btn btn-primary" onClick={()=>post()}>
-        <i className="feather icon-search "> Buscar </i>
+            closeMenuOnSelect={false}
+            components={animatedComponents}
+            isMulti
+            onChange={(e)=>complete(e)}
+            options={ingredient}
+            className='w-full'/>
+        <span className="search-btn flex justify-center items-center px-3 bg-primaryT text-white" onClick={()=>post()}>
+            <i className="feather icon-search "> Buscar </i>
         </span>
     </div>
   )
