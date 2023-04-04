@@ -21,12 +21,12 @@ const Home = () => {
           <SearchIngredient setList={setList} type="Ingredientes" />
         </Col>
       </Row>
-      {list.length > 0 ? list.map((data)=>(
+      {/*{list.length > 0 ? list.map((data)=>(
 
                   <Recipe  name={data.nombre} description={data.descripcion} image={data.imagen} ingredients={data.ingredientes} />
             )): " no hay productos"}
-      {/*<List/>*/}
-      <Recipes />
+      <List/>*/}
+      <Recipes recipes={list} setRecipes={setList}/>
       </Card>
     </div>
   )

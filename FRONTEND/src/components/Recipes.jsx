@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import { getRecipes } from "../services/recipes.service"
 
-export function Recipes() {
-  const [recipes, setRecipes] = useState([])
+export function Recipes({recipes, setRecipes}) {
+  //const [recipes, setRecipes] = useState([])
 
   useEffect(() => {
     async function effect() {
