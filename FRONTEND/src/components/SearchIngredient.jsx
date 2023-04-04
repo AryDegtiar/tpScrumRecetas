@@ -43,9 +43,10 @@ const SearchIngredient = (props) => {
             isMulti
             onChange={(e)=>complete(e)}
             options={ingredient}
+            placeholder="Ingrese sus ingredientes"
             className='w-full'/>
-        <span className="search-btn flex justify-center items-center px-3 bg-primaryT text-white" onClick={()=>post()}>
-            <i className="feather icon-search "> Buscar </i>
+        <span className="search-btn cursor-pointer flex justify-center items-center px-3 bg-primaryT text-white rounded-lg" onClick={()=>post()}>
+            <i className="feather icon-search capitalize font-bold"> Buscar </i>
         </span>
     </div>
   )
