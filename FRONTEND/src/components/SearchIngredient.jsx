@@ -45,7 +45,7 @@ const SearchIngredient = (props) => {
             options={ingredient}
             placeholder="Ingrese sus ingredientes"
             className='w-full'/>
-        <span className="search-btn cursor-pointer flex justify-center items-center px-3 bg-primaryT text-white rounded-lg" onClick={()=>post()}>
+        <span className="search-btn cursor-pointer flex justify-center items-center px-3 bg-black text-white rounded-lg" onClick={()=>post()}>
             <i className="feather icon-search capitalize font-bold"> Buscar </i>
         </span>
     </div>

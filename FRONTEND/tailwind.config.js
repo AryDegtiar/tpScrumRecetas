@@ -5,7 +5,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primaryT: '#FFA600'
+        primaryT: '#FFA600',
+        secondaryT: '#ffff9c'
       },
       fontFamily: {
         primaryT: "Poppins, sans-serif"
