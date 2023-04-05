@@ -15,6 +15,7 @@ const SearchIngredient = (props) => {
             // handle success
             response.data.map((data)=>{
                 list.push({value:data.nombre, label:data.nombre})
+                
             })
             setIngredient(list)
         })
@@ -32,6 +33,7 @@ const SearchIngredient = (props) => {
             // handle success
             console.log(response.data)
             props.setList(response.data.content)
+            props.setBool(true)
         })
     }
 

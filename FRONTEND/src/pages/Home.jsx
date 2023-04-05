@@ -7,6 +7,7 @@ import SearchIngredient from '../components/SearchIngredient';
 
 const Home = () => {
   const [list, setList]=useState([])
+  const[bool, setBool]=useState(false)
 
   
   console.log(list)
@@ -17,7 +18,7 @@ const Home = () => {
       <div className='mt-4'>
         <Row className='flex justify-center'>
           <Col sm={12} lg={8}>
-            <SearchIngredient setList={setList} type="Ingredientes" />
+            <SearchIngredient setList={setList} type="Ingredientes" setBool={setBool}/>
           </Col>
         </Row>
         {/*{list.length > 0 ? list.map((data)=>(
@@ -25,7 +26,7 @@ const Home = () => {
                     <Recipe  name={data.nombre} description={data.descripcion} image={data.imagen} ingredients={data.ingredientes} />
               )): " no hay productos"}
         <List/>*/}
-        <Recipes recipes={list} setRecipes={setList}/>
+        <Recipes recipes={list} setRecipes={setList} bool={bool}/>
       </div>
     </>
   )
