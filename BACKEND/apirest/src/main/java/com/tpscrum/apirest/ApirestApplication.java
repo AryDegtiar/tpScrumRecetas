@@ -41,6 +41,12 @@ public class ApirestApplication {
 			CategoriaReceta CategoriaReceta3 = new CategoriaReceta("Merienda", "Merienda");
 			categoriaRecetaRepository.save(CategoriaReceta3);
 
+			CategoriaReceta CategoriaReceta4 = new CategoriaReceta("Bebidas", "Bebidas");
+			categoriaRecetaRepository.save(CategoriaReceta4);
+
+			CategoriaReceta CategoriaReceta5 = new CategoriaReceta("Ensaladas", "Ensaladas");
+			categoriaRecetaRepository.save(CategoriaReceta5);
+
 
 			// Guardo algunas categorias de ingredientes en la base de datos
 			CategoriaIngrediente categoriaIngrediente1 = new CategoriaIngrediente("Carne", "Carne");
@@ -57,6 +63,12 @@ public class ApirestApplication {
 
 			CategoriaIngrediente categoriaIngrediente5 = new CategoriaIngrediente("Panaderia", "Alimentos de panaderia");
 			categoriaIngredienteRepository.save(categoriaIngrediente5);
+
+			CategoriaIngrediente categoriaIngrediente6 = new CategoriaIngrediente("Lácteos", "Productos lácteos");
+			categoriaIngredienteRepository.save(categoriaIngrediente6);
+
+			CategoriaIngrediente categoriaIngrediente7 = new CategoriaIngrediente("Frutos secos", "Frutos secos");
+			categoriaIngredienteRepository.save(categoriaIngrediente7);
 
 			// Guardo algunos ingredientes en la base de datos
 			Ingrediente ingrediente1 = new Ingrediente("Bola de lomo", "Feteada fina", 1);
@@ -91,6 +103,29 @@ public class ApirestApplication {
 			ingrediente1.setCategoria(categoriaIngrediente1);
 			ingredienteRepository.save(ingrediente8);
 
+			Ingrediente ingrediente9 = new Ingrediente("Leche", "Leche descremada", 1);
+			ingrediente9.setCategoria(categoriaIngrediente6);
+			ingredienteRepository.save(ingrediente9);
+
+			Ingrediente ingrediente10 = new Ingrediente("Café", "Café molido", 1);
+			ingrediente10.setCategoria(categoriaIngrediente3);
+			ingredienteRepository.save(ingrediente10);
+
+			Ingrediente ingrediente11 = new Ingrediente("Queso", "Queso rallado", 2);
+			ingrediente11.setCategoria(categoriaIngrediente6);
+			ingredienteRepository.save(ingrediente11);
+
+			Ingrediente ingrediente12 = new Ingrediente("Nuez", "Nuez picada", 1);
+			ingrediente12.setCategoria(categoriaIngrediente7);
+			ingredienteRepository.save(ingrediente12);
+
+			Ingrediente ingrediente13 = new Ingrediente("Arroz", "Arroz", 1);
+			ingrediente13.setCategoria(categoriaIngrediente7);
+			ingredienteRepository.save(ingrediente13);
+
+			Ingrediente ingrediente14 = new Ingrediente("ajo", "ajo", 1);
+			ingrediente14.setCategoria(categoriaIngrediente2);
+			ingredienteRepository.save(ingrediente14);
 
 			// Guardo algunas recetas en la base de datos
 			Receta receta1 = new Receta("Milanesa con papas fritas", "Milanesa de lomo con papas fritas","https://astelus.com/wp-content/viajes/Plato-de-milanesa-con-papas-ti%CC%81pico-de-Argentina.jpg");
@@ -109,6 +144,75 @@ public class ApirestApplication {
 			receta3.agregarIngrediente(ingrediente5);
 			recetaRepository.save(receta3);
 
+			Receta receta4 = new Receta("Café con leche", "Café con leche", "https://ichef.bbci.co.uk/news/976/cpsprodpb/154B9/production/_116484932_coffeewithmilk.jpg");
+			receta4.agregarIngrediente(ingrediente9);
+			receta4.agregarIngrediente(ingrediente10);
+			recetaRepository.save(receta4);
+
+			Receta receta5 = new Receta("Ensalada César", "Ensalada César", "https://www.thecookierookie.com/wp-content/uploads/2019/07/Classic-Caesar-Salad-Recipe-6.jpg");
+			receta5.agregarIngrediente(ingrediente2);
+			receta5.agregarIngrediente(ingrediente3);
+			receta5.agregarIngrediente(ingrediente11);
+			recetaRepository.save(receta5);
+
+			Receta receta6 = new Receta("Tarta de nueces", "Tarta de nueces", "https://www.hola.com/imagenes/cocina/recetas/20220331198612/tarta-nueces-queso-batido/0-101-958/tarta-nueces-queso-batido-t.jpg");
+			receta6.agregarIngrediente(ingrediente12);
+			receta6.agregarIngrediente(ingrediente5);
+			receta6.agregarIngrediente(ingrediente7);
+			recetaRepository.save(receta6);
+
+			Receta receta7 = new Receta("Tarta de cebolla y queso", "Tarta de cebolla y queso", "https://www.lacocinadelila.com/wp-content/uploads/2019/04/Tarta-de-cebolla-y-queso.jpg");
+			receta7.agregarIngrediente(ingrediente9);
+			receta7.agregarIngrediente(ingrediente10);
+			receta7.agregarIngrediente(ingrediente11);
+			receta7.agregarIngrediente(ingrediente3);
+			recetaRepository.save(receta7);
+
+			Receta receta8 = new Receta("Sopa de cebolla gratinada", "Sopa de cebolla gratinada", "https://www.recetasderechupete.com/wp-content/uploads/2017/02/Sopa-de-cebolla-gratinada-receta.jpg");
+			receta8.agregarIngrediente(ingrediente9);
+			receta8.agregarIngrediente(ingrediente2);
+			receta8.agregarIngrediente(ingrediente4);
+			receta8.agregarIngrediente(ingrediente8);
+			recetaRepository.save(receta8);
+
+			Receta receta9 = new Receta("Pollo con cebolla y pimiento", "Pollo con cebolla y pimiento", "https://www.cocinacaserayfacil.net/wp-content/uploads/2019/08/Pollo-con-cebolla-y-pimiento.jpg");
+			receta9.agregarIngrediente(ingrediente1);
+			receta9.agregarIngrediente(ingrediente3);
+			receta9.agregarIngrediente(ingrediente6);
+			receta9.agregarIngrediente(ingrediente9);
+			recetaRepository.save(receta9);
+
+			Receta receta10 = new Receta("Arroz con cebolla y ajo", "Arroz con cebolla y ajo", "https://cocina-casera.com/multimedia/recetas/tm/Arroz-con-cebolla-y-ajo.jpg");
+			receta10.agregarIngrediente(ingrediente13);
+			receta10.agregarIngrediente(ingrediente3);
+			receta10.agregarIngrediente(ingrediente14);
+			recetaRepository.save(receta10);
+
+			Receta receta11 = new Receta("Sopa de cebolla", "Sopa de cebolla", "https://www.comedera.com/wp-content/uploads/2017/10/Sopa-de-cebolla.jpg");
+			receta11.agregarIngrediente(ingrediente3);
+			recetaRepository.save(receta11);
+
+			Receta receta13 = new Receta("Pollo a la parrilla", "Pollo a la parrilla", "https://www.ecestaticos.com/image/clipping/b1429d45f0598c6e45c04b67f37c787f/pollo-a-la-parrilla-trucos-para-que-quede-ternero-y-sabroso.jpg");
+			receta13.agregarIngrediente(ingrediente8);
+			recetaRepository.save(receta13);
+
+			Receta receta16 = new Receta("Salteado de champiñones y pollo", "Salteado de champiñones y pollo", "https://www.recetasgratis.net/images/2/7/1/img_salteado_de_champinones_y_pollo_41712_orig.jpg");
+			receta16.agregarIngrediente(ingrediente5);
+			receta16.agregarIngrediente(ingrediente8);
+			receta16.agregarIngrediente(ingrediente3);
+			recetaRepository.save(receta16);
+
+			Receta receta17 = new Receta("Salmón a la plancha con ensalada", "Salmón a la plancha con ensalada", "https://www.recetasgratis.net/images/3/3/3/img_salon_a_la_plancha_con_ensalada_23333_orig.jpg");
+			receta17.agregarIngrediente(ingrediente2);
+			receta17.agregarIngrediente(ingrediente4);
+			receta17.agregarIngrediente(ingrediente6);
+			recetaRepository.save(receta17);
+
+			Receta receta18 = new Receta("Milanesas de pollo con puré de papas", "Milanesas de pollo con puré de papas", "https://www.recetasgratis.net/images/1/7/8/img_milanesas_de_pollo_con_pure_de_papas_85871_orig.jpg");
+			receta18.agregarIngrediente(ingrediente6);
+			receta18.agregarIngrediente(ingrediente7);
+			receta18.agregarIngrediente(ingrediente8);
+			recetaRepository.save(receta18);
 		};
 	}
 }
